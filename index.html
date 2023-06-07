@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resim Kırpma Uygulaması</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div>
+                <div class="drop-area" id="dropArea">
+                    <div class="drop-text">Sürükleyip bırakarak resim seçin.</div>
+                    <input type="file" id="fileInput">
+                </div>
+
+                <div>
+                    <button class="button crop-button" id="cropButton" disabled>Kırp ve Kaydet</button>
+                </div>
+            </div>
+            <div>
+                <img class="preview" id="preview" src="">
+            </div>
+            <div class="powered-by">
+                Powered by Berkay Sırtaş
+            </div>
+        </div>
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+    </body>
+
+</html>

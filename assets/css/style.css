@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+#dropArea {
+    min-width: 100%;
+    height: 300px;
+    border: 2px dashed #ccc;
+    text-align: center;
+    line-height: 300px;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+    background: linear-gradient(360deg, #000522 0%, #C1ECF5 100%), radial-gradient(100% 164.72% at 100% 100%, #FF00F5 0%, #00FF75 100%), radial-gradient(100% 148.07% at 0% 0%, #D50000 0%, #00FFFF 100%);
+    background-blend-mode: overlay, difference, normal;
+}
+
+.container {
+    max-width: 900px;
+    min-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.558);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    border-radius: .7rem;
+    transition: all ease .3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.drop-area {
+    width: 600px;
+    height: 600px;
+    border: 2px dashed #ccc;
+    text-align: center;
+    line-height: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.drop-text {
+    margin-bottom: 10px;
+}
+
+.drop-area:hover {
+    border-color: #aaa;
+}
+
+.drop-area input[type="file"] {
+    display: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.preview {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.crop-button {
+    margin-top: 20px;
+}
+
+.powered-by {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 20px;
+}
