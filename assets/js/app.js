@@ -1,7 +1,8 @@
-
 const dropArea = document.getElementById('dropArea');
 const fileInput = document.getElementById('fileInput');
 const preview = document.getElementById('preview');
+const cropWidth = document.getElementById('cropWidth');
+const cropHeight = document.getElementById('cropHeight');
 let cropper;
 
 dropArea.addEventListener('dragover', (e) => {
@@ -22,6 +23,12 @@ dropArea.addEventListener('drop', (e) => {
 
 fileInput.addEventListener('change', (e) => {
     const file = e.target.files[0];
+    const allowedFormats = ["image/jpeg", "image/png"];
+    if (!allowedFormats.includes(file.type)) {
+        alert("Yalnızca jpg ve png formatlarında resimler yüklenebilir.");
+        fileInput.value = ""; // Reset the input
+        return;
+    }
     processImage(file);
 });
 
@@ -39,23 +46,12 @@ function processImage(file) {
 
 function initCropper() {
     cropper = new Cropper(preview, {
-        aspectRatio: 1920 / 1080,
+        aspectRatio: Number(cropWidth.value) / Number(cropHeight.value),
         viewMode: 1,
         movable: false,
         zoomable: false,
         rotatable: false,
-        scalable: false,
-        crop: function (event) {
-            const croppedCanvas = cropper.getCroppedCanvas({
-                width: 1920,
-                height: 1080
-            });
-            // Kırpılmış canvas üzerinden işlemler yapabilirsiniz
-            // Örneğin, kırpılmış resmi kaydedebilir veya sunucuya yükleyebilirsiniz
-            // croppedCanvas.toBlob(function(blob) {
-            //   saveAs(blob, 'cropped_image.jpg');
-            // });
-        }
+        scalable: false
     });
 }
 
@@ -64,8 +60,8 @@ function enableCropButton() {
     cropButton.disabled = false;
     cropButton.addEventListener('click', () => {
         const croppedCanvas = cropper.getCroppedCanvas({
-            width: 1920,
-            height: 1080
+            width: Number(cropWidth.value),
+            height: Number(cropHeight.value)
         });
         croppedCanvas.toBlob(function (blob) {
             const url = URL.createObjectURL(blob);

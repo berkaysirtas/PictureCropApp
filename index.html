@@ -11,32 +11,38 @@
 
 <body>
 
-    <body>
-        <div class="container">
-            <div>
-                <div class="drop-area" id="dropArea">
-                    <div class="drop-text">Sürükleyip bırakarak resim seçin.</div>
-                    <input type="file" id="fileInput">
-                </div>
 
-                <div>
-                    <button class="button crop-button" id="cropButton" disabled>Kırp ve Kaydet</button>
-                </div>
+    <div class="container">
+        <div>
+            <div class="drop-area" id="dropArea">
+                <div class="drop-text">Sürükleyip bırakarak resim seçin.</div>
+                <input type="file" id="fileInput">
             </div>
+
             <div>
-                <img class="preview" id="preview" src="">
-            </div>
-            <div class="powered-by">
-                Powered by Berkay Sırtaş
+                <button class="button crop-button" id="cropButton" disabled>Kırp ve Kaydet</button>
             </div>
         </div>
+        <div>
+            <img class="preview" id="preview" src="">
+        </div>
+        <div class="powered-by">
+            Powered by Berkay Sırtaş
+        </div>
+        <div class="crop-size">
+            <label for="width">Genişlik: </label>
+            <input type="number" id="cropWidth" value="800">
+            <label for="height">Yükseklik: </label>
+            <input type="number" id="cropHeight" value="800">
+        </div>
+    </div>
 
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
-        <script src="assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="assets/js/app.js"></script>
 
-    </body>
+</body>
 
 </html>

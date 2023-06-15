@@ -25,7 +25,8 @@ body {
 
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    flex-direction: column;
+
     padding: 20px;
     background: linear-gradient(360deg, #000522 0%, #C1ECF5 100%), radial-gradient(100% 164.72% at 100% 100%, #FF00F5 0%, #00FF75 100%), radial-gradient(100% 148.07% at 0% 0%, #D50000 0%, #00FFFF 100%);
     background-blend-mode: overlay, difference, normal;
@@ -108,4 +109,33 @@ body {
     font-size: 12px;
     color: #888;
     margin-top: 20px;
+}
+
+.crop-size {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    /* Arka plan rengi */
+    padding: 10px;
+    /* İç boşluk eklenir */
+    border-radius: 5px;
+    /* Köşeleri yuvarlatmak için */
+}
+
+.crop-size label {
+    font-size: 16px;
+    color: #333;
+}
+
+.crop-size input[type="number"] {
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
 }
